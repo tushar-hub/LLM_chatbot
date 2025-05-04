@@ -1,0 +1,8 @@
+
+
+flask
+flask-cors
+faiss-cpu
+sentence-transformers
+google-generativeai
+langchain
