@@ -1,10 +1,11 @@
 
 
 
-Flask==2.2.2
-flask-cors==3.1.1
-langchain==0.0.185
-langchain-community==0.0.11
-faiss-cpu==1.7.2
-sentence-transformers==2.2.0
-google-generativeai==0.0.1
+Flask
+flask-cors
+langchain
+langchain-community
+faiss-cpu
+sentence-transformers
+google-generativeai
+
