@@ -1,6 +1,5 @@
 # %%
-%pip install flask-cors google-generativeai langchain faiss-cpu
-%pip install langchain_community
+
 import os
 import json
 import zipfile
@@ -82,7 +81,7 @@ if not documents:
 print(f"Generated {len(documents)} text chunks.")
 
 
-#  Build or Load FAISS Index
+#  Building  or Load FAISS Index
 
 if not os.path.isdir(VECTOR_DIR):
     db = FAISS.from_texts(documents, embeddings)
@@ -149,7 +148,7 @@ def query_endpoint():
         f"\n\nContext:\n{context}\n\nQuestion: {q}\nAnswer:"
     )
 
-    # ✅ Correct Gemini usage
+   
     model = genai.GenerativeModel("gemini-1.5-flash")
     chat = model.start_chat()
     response = chat.send_message(prompt)
@@ -162,9 +161,7 @@ if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8080))
     app.run(host='0.0.0.0', port=port)
 
-# ----------------------------------------
-# End of chatbot_app.py
-# ----------------------------------------
+
 
 
 # %%
